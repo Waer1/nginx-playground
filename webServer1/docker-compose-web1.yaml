@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  
+  webServer:
+    image: nginx
+    container_name: nginx
+    hostname: ng1
+    ports:
+      - 80:80
+    volumes:
+      - ./html:/usr/share/nginx/html
+
+
+
+
+networks:
+  private:
+      name: private
+      driver: bridge
+      attachable: true
